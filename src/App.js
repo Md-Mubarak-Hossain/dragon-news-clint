@@ -1,9 +1,12 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import About from './components/About/About';
 import Home from './components/Home/Home';
+import Inventory from './components/Inventory/Inventory';
 import Main from './components/Layout/Main';
 import Login from './components/Login/Login';
+import PrivateRouter from './components/PrivateRouter/PrivateRouter';
 import Signup from './components/Signup/Signup';
 
 function App() {
@@ -23,6 +26,14 @@ function App() {
         {
           path: '/signup',
           element: <Signup></Signup>
+        },
+        {
+          path: '/inventory',
+          element: <PrivateRouter><Inventory></Inventory></PrivateRouter>
+        },
+        {
+          path: '/about',
+          element: <PrivateRouter><About></About></PrivateRouter>
         },
       ]
 

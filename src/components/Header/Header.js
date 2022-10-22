@@ -16,6 +16,8 @@ const Header = () => {
             </div>
             <div className='w-4/12'>
                 <Link className="btn btn-ghost normal-case text-xl" to='/'>Home</Link>
+                <Link className="btn btn-ghost normal-case text-xl" to='/inventory'>Inventory</Link>
+                <Link className="btn btn-ghost normal-case text-xl" to='/about'>About</Link>
 
                 {
                     user?.email ?

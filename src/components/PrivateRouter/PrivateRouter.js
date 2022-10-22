@@ -1,10 +1,13 @@
 import React from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
 
 const PrivateRouter = () => {
+    const location = useLocation();
+
     return (
-        <div>
-            <h2>Private Router</h2>
-        </div>
+        <Navigate to='/login'
+            state={{ from: location }}
+            replace></Navigate>
     );
 };
 
